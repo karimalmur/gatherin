@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Auth::Engine, at: "/auth"
+  mount Gatherin::Auth::Engine, at: "/auth"
 end

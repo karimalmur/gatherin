@@ -1,2 +1,2 @@
-Auth::Engine.routes.draw do
+Gatherin::Auth::Engine.routes.draw do
 end

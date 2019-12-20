@@ -1,12 +1,12 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "auth/version"
+require "gatherin/auth/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "auth"
-  spec.version     = Auth::VERSION
+  spec.name        = "gatherin_auth"
+  spec.version     = Gatherin::Auth::VERSION
   spec.authors     = ["Karim Almur"]
   spec.email       = ["karimit.g@gmail.com"]
   # TODO spec.homepage    = "TODO"
