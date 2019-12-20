@@ -10,5 +10,3 @@ gem "rails", "~> 6.0.1"
 # Domain gems & engines
 
 gem "auth", path: "auth"
-
-gem 'seer', path: 'seer'
