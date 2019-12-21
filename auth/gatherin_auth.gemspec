@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["Karim Almur"]
   spec.email       = ["karimit.g@gmail.com"]
   # TODO spec.homepage    = "TODO"
-  spec.summary     = "Authentication engine for 'gatherin'."
-  spec.description = "Authentication engine for 'gatherin'."
+  spec.summary     = "Authentication engine for Gatherin"
+  spec.description = "Authentication engine for Gatherin"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
