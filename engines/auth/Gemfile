@@ -1,3 +1,5 @@
 eval_gemfile("../shared_dependencies.rb")
 
+gem "spree_core", path: "../core"
+
 gemspec

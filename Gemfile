@@ -15,4 +15,4 @@ end
 
 # Domain gems & engines
 
-gem "gatherin_auth", path: "auth"
+gem "gatherin_auth", path: "engines/auth"

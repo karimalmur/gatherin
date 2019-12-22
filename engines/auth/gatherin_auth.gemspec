@@ -1,12 +1,11 @@
-$:.push File.expand_path("lib", __dir__)
+require_relative "../core/lib/gatherin/core/version"
 
-# Maintain your gem's version:
-require "gatherin/auth/version"
+$:.push File.expand_path("lib", __dir__)
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "gatherin_auth"
-  spec.version     = Gatherin::Auth::VERSION
+  spec.version     = Gatherin.version
   spec.authors     = ["Karim Almur"]
   spec.email       = ["karimit.g@gmail.com"]
   spec.summary     = "Authentication engine for Gatherin"
@@ -23,4 +22,6 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   spec.test_files = Dir["spec/**/*"]
+
+  spec.add_dependency "gatherin_core", spec.version
 end
