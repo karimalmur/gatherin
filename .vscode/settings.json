@@ -6,5 +6,22 @@
     "myuser",
     "sharedapp",
     "somedatabase"
-  ]
+  ],
+  "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
+  "editor.lineHeight": 22,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
+  "explorer.decorations.badges": false,
+  "editor.tokenColorCustomizations": {
+    "[Material Theme Ocean High Contrast]": {
+        "comments": "#5c6475",
+        "strings": "#ffd561",
+    }
+  },
+  "workbench.colorCustomizations": {
+    "editor.background": "#0a0c11",
+    "statusBar.background": "#53183e",
+    "statusBarItem.hoverBackground": "#832561",
+    "statusBar.foreground": "#d2d2d2",
+  }
 }

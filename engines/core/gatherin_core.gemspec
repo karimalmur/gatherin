@@ -4,7 +4,7 @@ $:.push File.expand_path("lib", __dir__)
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "gatherin_cire"
+  spec.name        = "gatherin_core"
   spec.version     = Gatherin.version
   spec.authors     = ["Karim Almur"]
   spec.email       = ["karimit.g@gmail.com"]

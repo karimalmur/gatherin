@@ -16,3 +16,4 @@ end
 # Domain gems & engines
 
 gem "gatherin_auth", path: "engines/auth"
+gem "gatherin_core", path: "engines/core"
