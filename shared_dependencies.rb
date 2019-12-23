@@ -14,5 +14,9 @@ group :development, :test do
   gem "rspec-rails", "~> 3.9"
 end
 
+group :test do
+  gem "rubocop-rspec", "~> 1.37", ">= 1.37.1"
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]

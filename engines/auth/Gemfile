@@ -1,5 +1,5 @@
-eval_gemfile("../shared_dependencies.rb")
+eval_gemfile("../../shared_dependencies.rb")
 
-gem "spree_core", path: "../core"
+gem "gatherin_core", path: "../core"
 
 gemspec
