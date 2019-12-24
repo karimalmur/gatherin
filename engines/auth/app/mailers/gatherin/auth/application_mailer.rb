@@ -1,9 +1,8 @@
 module Gatherin
-	module Auth
-		class ApplicationMailer < ActionMailer::Base
-			default from: "from@example.com"
-			layout "mailer"
-		end
-	end
+  module Auth
+    class ApplicationMailer < ActionMailer::Base
+      default from: "from@example.com"
+      layout "mailer"
+    end
+  end
 end
-
