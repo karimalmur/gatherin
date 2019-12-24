@@ -14,8 +14,7 @@ require "action_cable/engine"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "auth"
-require "dotenv-rails"
+require "gatherin_auth"
 
 module Dummy
   class Application < Rails::Application
