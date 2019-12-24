@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.5"
 
 gem "rails", "~> 6.0.1"
+gem "pg", "~> 1.1", ">= 1.1.4"
 
 group :development, :test do
   gem "awesome_print"

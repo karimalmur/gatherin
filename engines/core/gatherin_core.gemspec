@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.test_files = Dir["spec/**/*"]
 
   spec.add_dependency "image_processing", "~> 1.10"
+  spec.add_dependency "name_of_person", "~> 1.1", ">= 1.1.1"
 end

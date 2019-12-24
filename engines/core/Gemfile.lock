@@ -3,6 +3,7 @@ PATH
   specs:
     gatherin_core (0.1.0)
       image_processing (~> 1.10)
+      name_of_person (~> 1.1, >= 1.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -106,6 +107,8 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.13.0)
+    name_of_person (1.1.1)
+      activesupport (>= 5.2.0)
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
