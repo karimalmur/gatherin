@@ -6,7 +6,6 @@ ruby "2.6.5"
 eval_gemfile("shared_dependencies.rb")
 
 gem "bootsnap", ">= 1.4.2", require: false
-gem "pg", "~> 1.1", ">= 1.1.4"
 gem "puma", "~> 4.1"
 
 group :development do
