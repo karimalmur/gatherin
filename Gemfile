@@ -7,6 +7,8 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.1"
 
+gem "rubocop", "~> 0.78", require: false
+
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
