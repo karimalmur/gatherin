@@ -19,6 +19,7 @@ group :development, :test do
   gem "rubocop", "~> 0.78", require: false
 end
 
-# Domain gems & engines
-gem "gatherin_auth", path: "engines/auth"
+# Domain gems & engines - Order matters!
 gem "gatherin_core", path: "engines/core"
+
+gem "gatherin_auth", path: "engines/auth"

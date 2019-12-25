@@ -24,4 +24,6 @@ Gem::Specification.new do |spec|
   spec.test_files = Dir["spec/**/*"]
 
   spec.add_dependency "gatherin_core", spec.version
+
+  spec.add_dependency "devise", "~> 4.7", ">= 4.7.1"
 end
