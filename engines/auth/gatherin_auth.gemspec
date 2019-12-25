@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Authentication engine for Gatherin"
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = ""
@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "gatherin_core", spec.version
 
   spec.add_dependency "devise", "~> 4.7", ">= 4.7.1"
+  spec.add_dependency "doorkeeper", "~> 5.2", ">= 5.2.3"
+  spec.add_dependency "doorkeeper-jwt", "~> 0.4.0"
 end
