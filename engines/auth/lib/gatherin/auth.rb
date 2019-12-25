@@ -1,4 +1,5 @@
 require "devise"
+require "doorkeeper"
 require "gatherin/auth/engine"
 
 module Gatherin

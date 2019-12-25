@@ -1,4 +1,9 @@
 Gatherin::Auth::Engine.routes.draw do
+  use_doorkeeper do
+    # No need to register client apps
+    skip_controllers :applications, :authorized_applications
+  end
+
   namespace :auth do
     api_version(
       module: "v1",
