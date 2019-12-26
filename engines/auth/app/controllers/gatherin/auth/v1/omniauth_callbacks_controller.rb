@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Gathering
+module Gatherin
   module Auth
     module V1
       class OmniauthCallbacksController < Devise::OmniauthCallbacksController

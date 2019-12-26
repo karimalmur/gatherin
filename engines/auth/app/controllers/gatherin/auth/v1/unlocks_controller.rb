@@ -1,21 +1,11 @@
 # frozen_string_literal: true
 
-module Gathering
+module Gatherin
   module Auth
     module V1
       class UnlocksController < Devise::UnlocksController
-        # GET /resource/unlock/new
-        # def new
-        #   super
-        # end
-
         # POST /resource/unlock
         # def create
-        #   super
-        # end
-
-        # GET /resource/unlock?unlock_token=abcdef
-        # def show
         #   super
         # end
 
