@@ -7,7 +7,17 @@ Doorkeeper.configure do
 
   # This block will be called to check whether the resource owner is authenticated or not.
   resource_owner_authenticator do
-    current_user || warden.authenticate!(scope: :user)
+    return current_user if current_user.present?
+
+    request.params[:user] = { email: request.params[:username], password: request.params[:password] }
+    request.env["devise.allow_params_authentication"] = true
+    warden.authenticate!(scope: :user, store: false)
+  end
+
+  resource_owner_from_credentials do
+    request.params[:user] = { email: request.params[:username], password: request.params[:password] }
+    request.env["devise.allow_params_authentication"] = true
+    request.env["warden"].authenticate!(scope: :user, store: false)
   end
 
   # If you didn't skip applications controller from Doorkeeper routes in your application routes.rb
@@ -30,7 +40,7 @@ Doorkeeper.configure do
   # want to use API mode that will skip all the views management and change the way how
   # Doorkeeper responds to a requests.
   #
-  # api_only
+  api_only
 
   # Enforce token request content type to application/x-www-form-urlencoded.
   # It is not enabled by default to not break prior versions of the gem.
@@ -72,7 +82,7 @@ Doorkeeper.configure do
   # +ActionController::API+. The return value of this option must be a stringified class name.
   # See https://doorkeeper.gitbook.io/guides/configuration/other-configurations#custom-base-controller
   #
-  # base_controller 'ApplicationController'
+  base_controller "Gatherin::Auth::ApplicationController"
 
   # Reuse access token for the same resource owner within an application (disabled by default).
   #
@@ -146,7 +156,7 @@ Doorkeeper.configure do
   # `grant_type` - the grant type of the request (see Doorkeeper::OAuth)
   # `scopes` - the requested scopes (see Doorkeeper::OAuth::Scopes)
   #
-  # use_refresh_token
+  use_refresh_token
 
   # Provide support for an owner to be assigned to each registered application (disabled by default)
   # Optional parameter confirmation: true (default: false) if you want to enforce ownership of
@@ -278,6 +288,7 @@ Doorkeeper.configure do
   #   http://tools.ietf.org/html/rfc6819#section-4.4.3
   #
   # grant_flows %w[authorization_code client_credentials]
+  grant_flows %w[implicit password]
 
   # Allows to customize OAuth grant flows that +each+ application support.
   # You can configure a custom block (or use a class respond to `#call`) that must
@@ -342,6 +353,7 @@ Doorkeeper.configure do
   # skip_authorization do |resource_owner, client|
   #   client.superapp? or resource_owner.admin?
   # end
+  skip_authorization { true }
 
   # Configure custom constraints for the Token Introspection request.
   # By default this configuration option allows to introspect a token by another

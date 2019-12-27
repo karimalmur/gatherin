@@ -1,3 +1,4 @@
+# Doorkeeper needs to be drawn into the parent's app routes
 Rails.application.routes.draw do
   use_doorkeeper do
     # No need to register client apps
