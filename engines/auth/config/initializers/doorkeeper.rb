@@ -14,12 +14,6 @@ Doorkeeper.configure do
     warden.authenticate!(scope: :user, store: false)
   end
 
-  resource_owner_from_credentials do
-    request.params[:user] = { email: request.params[:username], password: request.params[:password] }
-    request.env["devise.allow_params_authentication"] = true
-    request.env["warden"].authenticate!(scope: :user, store: false)
-  end
-
   # If you didn't skip applications controller from Doorkeeper routes in your application routes.rb
   # file then you need to declare this block in order to restrict access to the web interface for
   # adding oauth authorized applications. In other case it will return 403 Forbidden response
