@@ -11,6 +11,7 @@ PATH
   remote: engines/core
   specs:
     gatherin_core (0.1.0)
+      fast_jsonapi (~> 1.5)
       image_processing (~> 1.10)
       name_of_person (~> 1.1, >= 1.1.1)
 
@@ -109,6 +110,8 @@ GEM
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
     erubi (1.9.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.11.3)
     fuubar (2.5.0)
       rspec-core (~> 3.0)
