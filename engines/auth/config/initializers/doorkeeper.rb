@@ -63,7 +63,12 @@ Doorkeeper.configure do
   # `scopes` - the requested scopes (see Doorkeeper::OAuth::Scopes)
   #
   custom_access_token_expires_in do |context|
-    context.grant_type == Doorkeeper::OAuth::IMPLICIT ? 1.week.to_i : 15.minutes.to_i
+    # See https://stackoverflow.com/questions/26739167/jwt-json-web-token-automatic-prolongation-of-expiration/26834685#26834685
+    if context.client.name == Gatherin::Auth::WEB_OAUTH_APP_NAME
+      1.week.to_i
+    else
+      15.minutes.to_i
+    end
   end
 
   # Use a custom class for generating the access token.
@@ -150,7 +155,11 @@ Doorkeeper.configure do
   # `grant_type` - the grant type of the request (see Doorkeeper::OAuth)
   # `scopes` - the requested scopes (see Doorkeeper::OAuth::Scopes)
   #
-  use_refresh_token
+  use_refresh_token do |context|
+    # Enable refresh token only for native apps
+    # See https://stackoverflow.com/questions/26739167/jwt-json-web-token-automatic-prolongation-of-expiration/26834685#26834685
+    context.client.name == Gatherin::Auth::NATIVE_OAUTH_APP_NAME
+  end
 
   # Provide support for an owner to be assigned to each registered application (disabled by default)
   # Optional parameter confirmation: true (default: false) if you want to enforce ownership of
