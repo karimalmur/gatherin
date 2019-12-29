@@ -1,3 +1,5 @@
+require_dependency(Gatherin::Core::Engine.root.join("app", "models", "gatherin", "user").to_s)
+
 module Gatherin
   class User < ApplicationRecord
     devise :database_authenticatable, :registerable, :confirmable,
