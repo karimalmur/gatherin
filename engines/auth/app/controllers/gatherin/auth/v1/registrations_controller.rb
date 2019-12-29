@@ -20,11 +20,11 @@ module Gatherin
               expire_data_after_sign_in!
               # TODO Set custom attribute indicating that the user is not active (need confirmation or locked)
             end
-            render json: resource
+            render_success! Gatherin::UserSerializer.new(resource, {}).serialized_json
           else
             clean_up_passwords resource
             set_minimum_password_length
-            respond_with resource # TODO custom serialization
+            render_failure! resource.errors.full_messages
           end
         end
 

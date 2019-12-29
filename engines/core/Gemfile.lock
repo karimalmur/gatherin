@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     gatherin_core (0.1.0)
+      fast_jsonapi (~> 1.5)
       image_processing (~> 1.10)
       name_of_person (~> 1.1, >= 1.1.1)
 
@@ -82,6 +83,8 @@ GEM
       railties (>= 3.0)
     diff-lcs (1.3)
     erubi (1.9.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.11.3)
     fuubar (2.5.0)
       rspec-core (~> 3.0)
@@ -112,6 +115,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    pg (1.1.4)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -185,6 +189,10 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode_utils (1.4.0)
+    versionist (2.0.1)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.9.20)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -200,10 +208,12 @@ DEPENDENCIES
   debbie
   fuubar (~> 2.4, >= 2.4.1)
   gatherin_core!
+  pg (~> 1.1, >= 1.1.4)
   pry-rails
   rails (~> 6.0.1)
   rspec-rails (~> 3.9)
   tzinfo-data
+  versionist (~> 2.0, >= 2.0.1)
 
 RUBY VERSION
    ruby 2.6.5p114
