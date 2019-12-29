@@ -1,8 +1,7 @@
 module Gatherin
   module Auth
-    class ApplicationController < ActionController::API
+    class ApplicationController < Gatherin::Core::ApplicationController
       before_action :configure_permitted_params, if: :devise_controller?
-      # before_action :doorkeeper_authorize!
 
       protected
 
