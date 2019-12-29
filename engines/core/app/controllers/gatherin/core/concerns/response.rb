@@ -4,7 +4,7 @@ module Gatherin
       render json: object, status: status
     end
 
-    def render_failure!(messages: [], status: 422)
+    def render_failure!(messages = [], status: 422)
       data = { errors: { details: Array.wrap(messages), status: status } }
       render json: data, status: status
     end
