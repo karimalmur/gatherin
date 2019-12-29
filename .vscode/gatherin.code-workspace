@@ -11,6 +11,7 @@
 		}
 	],
 	"settings": {
+		"terminal.integrated.cwd": "/home/dev/projects/rails/gatherin",
 		"explorer.decorations.badges": false,
 		"editor.tokenColorCustomizations": {
 			"[Material Theme Ocean High Contrast]": {
