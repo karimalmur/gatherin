@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "/home/dev/projects/rails/gatherin"
+		},
+		{
+			"path": "/home/dev/projects/rails/gatherin/engines/auth"
+		},
+		{
+			"path": "/home/dev/projects/rails/gatherin/engines/core"
+		}
+	],
+	"settings": {
+		"explorer.decorations.badges": false,
+		"editor.tokenColorCustomizations": {
+			"[Material Theme Ocean High Contrast]": {
+				"comments": "#5c6475",
+				"strings": "#ffd561"
+			}
+		},
+		"workbench.colorCustomizations": {
+			"editor.background": "#0a0c11",
+			"statusBar.background": "#53183e",
+			"statusBarItem.hoverBackground": "#832561",
+			"statusBar.foreground": "#d2d2d2"
+		}
+	}
+}
