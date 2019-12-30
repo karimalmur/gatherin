@@ -168,6 +168,8 @@ GEM
     puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.8)
+    rack-attack (6.2.2)
+      rack (>= 1.0, < 3)
     rack-cors (1.1.0)
       rack (>= 2.0.0)
     rack-test (1.1.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   pg (~> 1.1, >= 1.1.4)
   pry-rails
   puma (~> 4.1)
+  rack-attack (~> 6.2, >= 6.2.2)
   rack-cors (~> 1.1)
   rails (~> 6.0.1)
   rspec-rails (~> 3.9)
