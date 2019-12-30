@@ -18,12 +18,6 @@ module Gatherin
                  class_name: "Doorkeeper::AccessToken",
                  foreign_key: :resource_owner_id,
                  dependent: :delete_all # or :destroy if you need ca
-
-        module ClassMethods
-          def reconfirmable
-            false
-          end
-        end
       end
     end
   end
