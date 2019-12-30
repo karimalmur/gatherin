@@ -7,6 +7,9 @@ gem "rails", "~> 6.0.1"
 gem "pg", "~> 1.1", ">= 1.1.4"
 gem "versionist", "~> 2.0", ">= 2.0.1"
 
+gem "marginalia"
+gem "shog"
+
 group :development, :test do
   gem "awesome_print"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
