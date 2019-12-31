@@ -5,7 +5,7 @@ Rack::Attack.throttle("req/ip", limit: 120, period: 1.minute) do |req|
 end
 
 Rack::Attack.throttle("logins", limit: 5, period: 20.seconds) do |req|
-  if req.post?
+  if req.post? && req.content_type == "application/json"
     parsed_body = JSON.parse(req.env["rack.input"].read)
     if req.path =~ %r{/oauth}
       # return the email if present, nil otherwise
