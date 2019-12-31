@@ -1,0 +1,8 @@
+eval_gemfile("../../shared_dependencies.rb")
+
+# rubocop:disable Bundler/OrderedGems
+gem "gatherin_core", path: "../core"
+gem "gatherin_auth", path: "../auth"
+# rubocop:enable Bundler/OrderedGems
+
+gemspec
