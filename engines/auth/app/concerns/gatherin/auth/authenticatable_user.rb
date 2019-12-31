@@ -18,6 +18,11 @@ module Gatherin
                  class_name: "Doorkeeper::AccessToken",
                  foreign_key: :resource_owner_id,
                  dependent: :delete_all # or :destroy if you need ca
+
+        # Use ActiveJob (with sidekiq as backend) to deliver mail
+        def send_devise_notification(notification, *args)
+          devise_mailer.send(notification, self, *args).deliver_later
+        end
       end
     end
   end
