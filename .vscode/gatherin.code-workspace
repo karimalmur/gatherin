@@ -4,10 +4,13 @@
 			"path": "/home/dev/projects/rails/gatherin"
 		},
 		{
+			"path": "/home/dev/projects/rails/gatherin/engines/core"
+		},
+		{
 			"path": "/home/dev/projects/rails/gatherin/engines/auth"
 		},
 		{
-			"path": "/home/dev/projects/rails/gatherin/engines/core"
+			"path": "/home/dev/projects/rails/gatherin/engines/admin"
 		}
 	],
 	"settings": {
