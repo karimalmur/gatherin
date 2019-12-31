@@ -1,6 +1,7 @@
 module Gatherin
   class User < ApplicationRecord
-    has_one_attached :avatar # main profile picture
+    rolify role_cname: "::Gatherin::Role"
+    has_one_attached :avatar
     has_person_name
   end
 end
