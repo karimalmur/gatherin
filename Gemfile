@@ -22,6 +22,8 @@ group :development, :test do
 end
 
 # Domain gems & engines - Order matters!
+# rubocop:disable Bundler/OrderedGems
 gem "gatherin_core", path: "engines/core"
-
 gem "gatherin_auth", path: "engines/auth"
+gem "gatherin_admin", path: "engines/admin"
+# rubocop:enable Bundler/OrderedGems
