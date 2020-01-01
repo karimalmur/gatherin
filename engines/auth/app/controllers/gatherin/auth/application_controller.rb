@@ -1,6 +1,13 @@
 module Gatherin
   module Auth
-    class ApplicationController < Gatherin::Core::ApplicationController
+    class ApplicationController < ActionController::Base
+      include Gatherin::Core::Concerns::Response
+      include Gatherin::Core::Concerns::ErrorHandlers
+
+      protect_from_forgery prepend: true
+      skip_before_action :verify_authenticity_token,
+                         if: -> { controller_name == "sessions" && action_name == "create" }
+
       before_action :configure_permitted_params, if: :devise_controller?
 
       protected
