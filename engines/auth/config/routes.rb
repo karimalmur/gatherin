@@ -15,4 +15,8 @@ Gatherin::Auth::Engine.routes.draw do
   ) do
     devise_for :users, class_name: "Gatherin::User", path: "", skip: %i[sessions password], singular: :user
   end
+
+  Gatherin::Auth.additional_mappings.each do |resource_name, options|
+    devise_for resource_name, options
+  end
 end
