@@ -2,6 +2,7 @@
 
 require "devise"
 require "doorkeeper"
+require "doorkeeper/jwt"
 require "gatherin/auth/engine"
 
 module Gatherin
