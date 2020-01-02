@@ -1,7 +1,52 @@
-<p>Hello <%= @email %>!</p>
-
-<% if @resource.try(:unconfirmed_email?) %>
-  <p>We're contacting you to notify you that your email is being changed to <%= @resource.unconfirmed_email %>.</p>
-<% else %>
-  <p>We're contacting you to notify you that your email has been changed to <%= @resource.email %>.</p>
+<% content_for :subtext do %>
+  <% if @resource.try(:unconfirmed_email?) %>
+    <p>We're contacting you to notify you that your email is being changed to <%= @resource.unconfirmed_email %>.</p>
+  <% else %>
+    <p>We're contacting you to notify you that your email has been changed to <%= @resource.email %>.</p>
+  <% end %>
+<% end %>
+<% content_for :table_rows do %>
+  <tr>
+    <td bgcolor="#ffffff" align="center" style="padding: 0;">
+      <!--[if (gte mso 9)|(IE)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="350">
+  <tr>
+  <td align="center" valign="top" width="350">
+  <![endif]-->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%"
+        style="max-width: 500px;border-bottom: 1px solid #e4e4e4;">
+        <tbody>
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding: 20px 0 0 0; color: #666666; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400;-webkit-font-smoothing:antialiased;">
+              <p class="headingMobile"
+                style="margin: 0;color: #171717;font-size: 26px;font-weight: 200;line-height: 130%;margin-bottom:5px;">
+                Eamil change
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td height="20"></td>
+          </tr>
+          <tr>
+            <td bgcolor="#ffffff" align="left"
+              style="padding:0; color: #666666; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400;-webkit-font-smoothing:antialiased;">
+              <p style="margin:0;margin-top:20px;line-height:0;"></p>
+              <p style="margin:0;color:#585858;font-size:14px;font-weight:400;line-height:170%;">
+                Hello <%= @resource.email %>!
+              </p>
+              <p style="margin:0;font-size:14px;font-weight:400;line-height:170%;">
+                <% if @resource.try(:unconfirmed_email?) %>
+                  <p>We're contacting you to notify you that your email is being changed to <%= @resource.unconfirmed_email %>.</p>
+                <% else %>
+                  <p>We're contacting you to notify you that your email has been changed to <%= @resource.email %>.</p>
+                <% end %>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+              <!--[if (gte mso 9)|(IE)]></td></tr></table>
+  <![endif]-->
+    </td>
+  </tr>
 <% end %>
