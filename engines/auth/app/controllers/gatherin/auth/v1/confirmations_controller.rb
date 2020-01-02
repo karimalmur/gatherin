@@ -4,6 +4,7 @@ module Gatherin
   module Auth
     module V1
       class ConfirmationsController < Devise::ConfirmationsController
+        respond_to :json
         # POST /resource/confirmation
         # def create
         #   super

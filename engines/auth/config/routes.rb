@@ -13,7 +13,13 @@ Gatherin::Auth::Engine.routes.draw do
     defaults: { format: :json },
     header: { name: "Accept", value: "application/vnd.gatherin.com; version=1" },
   ) do
-    devise_for :users, class_name: "Gatherin::User", path: "", skip: %i[sessions password], singular: :user
+    devise_for(
+      :users,
+      class_name: "Gatherin::User",
+      skip: %i[sessions password],
+      singular: :user,
+      path: "",
+    )
   end
 
   Gatherin::Auth.additional_mappings.each do |resource_name, options|
