@@ -16,7 +16,7 @@ Gatherin::Auth::Engine.routes.draw do
     devise_for(
       :users,
       class_name: "Gatherin::User",
-      skip: %i[sessions password],
+      skip: %i[sessions],
       singular: :user,
       path: "",
     )

@@ -4,6 +4,7 @@ module Gatherin
   module Auth
     module V1
       class PasswordsController < Devise::PasswordsController
+        respond_to :json
         # POST /resource/password
         # def create
         #   super
