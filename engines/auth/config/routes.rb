@@ -9,7 +9,6 @@ end
 Gatherin::Auth::Engine.routes.draw do
   api_version(
     module: "v1",
-    default: true,
     defaults: { format: :json },
     header: { name: "Accept", value: "application/vnd.gatherin.com; version=1" },
   ) do
