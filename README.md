@@ -1,24 +1,22 @@
-# README
+# Gatherin-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+(WORK IN PROGRESS) `Gatherin` is an event planning application. The main goal behind this project is to
+gain familiarity with Rails modular apps.
 
-Things you may want to cover:
+## Modules
 
-* Ruby version
+Gatherin consists of many modules (Rails engines or Ruby gems). This design is inspired by [![The Modular Monolith Rails Architecture](https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4)]
 
-* System dependencies
+# Core
+Gatherin Core. Holds basic models and shared logic.
 
-* Configuration
+# Auth
+Holds Gatherin authentication and authorization logic. It uses Devise and Doorkeeper.
 
-* Database creation
+# Admin
+Gatherin adminstration module. Uses session based authentication for now. To be updated to be API-only with
+React-Admin as a frontend.
 
-* Database initialization
+## LICENSE
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MIT.
