@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.6
+script:
+  - bundle exec rspec
+  - bundle exec codeclimate-test-reporter
+addons:
+  code_climate:
+    repo_token:
+      secure: 0d08efc5d0a3bd30e85bb453ca7ecd90945303c890ab0d4acd30ac02924fac18
