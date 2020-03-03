@@ -6,7 +6,7 @@ ruby "2.6.5"
 eval_gemfile("shared_dependencies.rb")
 
 gem "bootsnap", ">= 1.4.2", require: false
-gem "puma", "~> 4.1"
+gem "puma", "~> 4.3"
 gem "rack-attack", "~> 6.2", ">= 6.2.2"
 gem "rack-cors", "~> 1.1"
 
