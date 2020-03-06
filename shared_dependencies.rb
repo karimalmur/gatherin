@@ -10,6 +10,7 @@ gem "sidekiq", "~> 6.0", ">= 6.0.4"
 # This is useful when using a single instance of Redis with multiple, different applications.
 gem "redis-namespace", "~> 1.7"
 gem "versionist", "~> 2.0", ">= 2.0.1"
+gem "graphql", "~> 1.9", ">= 1.9.18"
 
 gem "marginalia"
 gem "shog"

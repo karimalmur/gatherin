@@ -19,6 +19,7 @@ end
 
 group :development, :test do
   gem "dotenv-rails", require: "dotenv/rails-now"
+  gem "graphiql-rails", "~> 1.7"
   gem "rubocop", "~> 0.78", require: false
 end
 

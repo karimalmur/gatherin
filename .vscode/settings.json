@@ -1,16 +1,14 @@
 {
   "cSpell.words": [
     "gatherin",
+    "graphiql",
+    "js",
     "myapp",
     "mypass",
     "myuser",
     "sharedapp",
     "somedatabase"
   ],
-  "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace",
-  "editor.lineHeight": 22,
-  "editor.fontLigatures": true,
-  "editor.fontWeight": "400",
   "explorer.decorations.badges": false,
   "editor.tokenColorCustomizations": {
     "[Material Theme Ocean High Contrast]": {
