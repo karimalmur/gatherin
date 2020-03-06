@@ -94,6 +94,7 @@ GEM
       ruby-progressbar (~> 1.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (1.10.4)
     hirb (0.7.3)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
@@ -119,7 +120,7 @@ GEM
     name_of_person (1.1.1)
       activesupport (>= 5.2.0)
     nio4r (2.5.2)
-    nokogiri (1.10.7)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
     pry (0.12.2)
@@ -228,6 +229,7 @@ DEPENDENCIES
   debbie
   fuubar (~> 2.4, >= 2.4.1)
   gatherin_core!
+  graphql (~> 1.9, >= 1.9.18)
   marginalia
   pg (~> 1.1, >= 1.1.4)
   pry-rails (~> 0.3.9)
