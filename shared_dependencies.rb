@@ -5,7 +5,7 @@ ruby "2.6.5"
 
 gem "rails", "~> 6.0.1"
 gem "pg", "~> 1.1", ">= 1.1.4"
-gem "sidekiq", "~> 6.0", ">= 6.0.4"
+gem "sidekiq", "~> 6.2"
 # redis-namespace: Adds a Redis::Namespace class which can be used to namespace calls to Redis.
 # This is useful when using a single instance of Redis with multiple, different applications.
 gem "redis-namespace", "~> 1.7"
